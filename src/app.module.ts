@@ -2,19 +2,20 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { PersonModule } from "./person/person.module";
 
 @Module({
   imports: [
     TypeOrmModule.forRoot({
-      type: 'mysql',
+      type: 'postgres',
       host: 'localhost',
-      port: 3306,
-      username: 'root',
+      port: 5432,
+      username: 'postgress',
       password: '123456789',
-      database: 'database',
+      database: 'crudnest',
       autoLoadEntities: true
-    })
-
+    }),
+PersonModule
   ],
   controllers: [AppController],
   providers: [AppService],
