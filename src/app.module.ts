@@ -10,10 +10,10 @@ import { PersonModule } from "./person/person.module";
       type: 'postgres',
       host: 'localhost',
       port: 5432,
-      username: 'postgress',
+      username: 'raquel',
       password: '123456789',
       database: 'crudnest',
-      autoLoadEntities: true
+      autoLoadEntities: true,
     }),
 PersonModule
   ],
